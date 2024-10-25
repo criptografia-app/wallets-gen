@@ -1,0 +1,11 @@
+# filename: docker-compose.yml
+
+version: '3.8'
+
+services:
+  wallet-generator:
+    build: .
+    container_name: wallet-generator
+    volumes:
+      - ./wallets:/app/wallets
+    command: python /app/gen_wallets.py
